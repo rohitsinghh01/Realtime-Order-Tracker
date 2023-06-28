@@ -10,137 +10,19 @@
 <section class="menu-section">
     <h1 class="menu">Pizza Catalog</h1>
     <div class="menu-container">
+        <% pizzas.forEach(function(pizza) { %>
         <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
+            <img src="/Images/<%= pizza.image %>" alt="pizza" class="pizza">
             <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
+                <h3><%= pizza.name %></h3>
+                <p><%= pizza.size %></p>
             </div>
             <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
+                <h4>₹<%= pizza.price %></h4>
+                <button class="add-to-cart" data-pizza="<%= JSON.stringify(pizza) %>">+ Add</button>
             </div>
         </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
-        <div class="container">
-            <img src="/Images/pizza.png" alt="pizza" class="pizza">
-            <div class="name-size">
-                <h3>Margherita</h3>
-                <p>Small</p>
-            </div>
-            <div class="price-button">
-                <h4>₹250</h4>
-                <button>+ Add</button>
-            </div>
-        </div>
+        <% }) %>
+
     </div>
 </section>

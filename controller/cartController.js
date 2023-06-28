@@ -2,4 +2,8 @@ const cart = (req, res) => {
   res.render('customer/cart');
 };
 
-module.exports = { cart };
+const updateCart = (req, res) => {
+  res.json({ data: 'all ok' });
+};
+
+module.exports = { cart, updateCart };
