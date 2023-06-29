@@ -8,6 +8,6 @@ router.route('/').get(home);
 router.route('/login').post(login).get(login);
 router.route('/register').post(register).get(register);
 router.route('/cart').get(cart);
-router.route('update-cart').post(updateCart)
+router.route('/update-cart').post(updateCart)
 
 module.exports = router;
