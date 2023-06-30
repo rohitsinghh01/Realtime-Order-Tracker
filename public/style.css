@@ -76,6 +76,9 @@ a {
   background-color: #f38154;
   cursor: pointer;
 }
+.cart-counter{
+  font-size: 1.3rem;
+}
 .logo {
   width: 50px;
   margin-left: 90px;

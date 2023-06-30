@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bfc87244b9.js" crossorigin="anonymous"></script>
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <title>Realtime Order Tracker</title>
 </head>
 
@@ -27,8 +29,9 @@
                 <li><a href="/">Menu</a></li>
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">Login</a></li>
-                <!-- <span id="cartCounter"><%= session.cart ? session.cart.totalQty : '' %></span> -->
-                <a href="/cart"><img src="/Images/cart.png" alt="cart-img" class="cart"></a>
+                <div class="cart">
+                    <a href="/cart"><img src="/Images/cart.png" alt="cart-img"></a>
+                </div>
             </ul>
         </div>
 
