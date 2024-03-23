@@ -1,13 +1,16 @@
-const router = require('express').Router();
-const { home } = require('../controller/homeController');
-const {login}=require('../controller/loginController')
-const {register}=require('../controller/registerController')
-const {cart,updateCart}=require('../controller/cartController')
+const homeController = require('../controller/homeController');
+const authController = require('../controller/authContoller');
+const guest = require('../middlewares/guest');
+const auth = require('../middlewares/auth');
+const admin = require('../middlewares/admin');
 
-router.route('/').get(home);
-router.route('/login').post(login).get(login);
-router.route('/register').post(register).get(register);
-router.route('/cart').get(cart);
-router.route('/update-cart').post(updateCart)
+function initRoutes(app) {
+  app.get('/', homeController().index);
+  app.get('/login', guest, authController().login);
+  app.post('/login', authController().postLogin);
+  app.get('/register', guest, authController().register);
+  app.post('/register', authController().postRegister);
+  app.post('/logout', authController().logout);
+}
 
-module.exports = router;
+module.exports = initRoutes;

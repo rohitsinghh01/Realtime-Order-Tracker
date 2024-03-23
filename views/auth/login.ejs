@@ -1,10 +1,16 @@
 <section class="main-container">
     <div class="form-container">
         <h1>Welcome Back !</h1>
-        <form action="">
+        <form action="/login" method="POST">
             <div class="form">
-                <input type="email" placeholder="Your email" class="input" autocomplete="off" autofocus required>
-                <input type="password" placeholder="***********" class="input" autofocus required>
+                <% if(messages.error) { %>
+                    <span style="color: red; font-weight:bold">
+                        <%= messages.error %>
+                    </span>
+                    <% } %>
+                <input name="email" type="email" placeholder="Your email" class="input" autocomplete="off" autofocus>
+                
+                <input name="password" type="password" placeholder="***********" class="input" autofocus>
                 <div class="options">
                     <div>
                         <a href="/register">Don't have an account?</a>
@@ -16,7 +22,5 @@
                 <button type="submit" class="btn loginbtn">Login</button>
             </div>
         </form>
-        <p class="or">OR</p>
-        <button class="btn loginbtn gbtn"><i class="fa-brands fa-google google" style="color: #fFF;"></i>Login with Google</button>
     </div>
 </section>

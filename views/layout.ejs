@@ -27,11 +27,22 @@
         <div class="nav">
             <ul class="navlist">
                 <li><a href="/">Menu</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Login</a></li>
-                <div class="cart">
-                    <a href="/cart"><img src="/Images/cart.png" alt="cart-img"></a>
-                </div>
+                <% if(user) { %>
+                    <li>
+                        <form id="logout" action="/logout" method="POST">
+                            <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+                    </li>
+                    </form>
+                    <span style="margin-right:20px">
+                        <%= user.name %>
+                    </span>
+                    <% } else { %>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <% } %>
+                            <div class="cart">
+                                <a href="/cart"><img src="/Images/cart.png" alt="cart-img"></a>
+                            </div>
             </ul>
         </div>
 

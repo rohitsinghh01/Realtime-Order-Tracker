@@ -1,8 +1,12 @@
 const Menu = require('../models/menu');
 
-const home = async (req, res) => {
-  const pizzas = await Menu.find({});
-  res.render('home',{pizzas:pizzas});
-};
+function homeController() {
+  return {
+    async index(req, res) {
+      const pizzas = await Menu.find();
+      return res.render('home', { pizzas: pizzas });
+    },
+  };
+}
 
-module.exports = { home };
+module.exports = homeController ;
